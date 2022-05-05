@@ -1,19 +1,10 @@
 graph = {
-    'A': ['B', 'C'],
-    'B': ['D', 'E'],
-    'C': ['F', 'G'],
-    'D': ['H', 'I'],
-    'E': ['J', 'K'],
-    'F': ['L', 'M'],
-    'G': ['N', 'O'],
-    'H': [],
-    'I': [],
-    'J': [],
-    'K': [],
-    'L': [],
-    'M': [],
-    'N': [],
-    'O': []
+    '5': ['3', '7'],
+    '3': ['2', '4'],
+    '7': ['8'],
+    '2': [],
+    '4': ['8'],
+    '8': []
 }
 
 
@@ -35,13 +26,13 @@ def DLS(start, goal, path, level, maxD):
     return False
 
 
-start = 'A'
+start = '5'
 goal = input('Enter the goal node:-')
 maxD = int(input("Enter the maximum depth limit:-"))
 print()
 path = list()
-res = DLS(start, goal, path, 0, maxD)
-if (res):
+result = DLS(start, goal, path, 0, maxD)
+if (result):
     print("Path to goal node available")
     print("Path", path)
 else:
