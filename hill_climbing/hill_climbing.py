@@ -2,6 +2,7 @@
 
 import random
 
+
 def randomSolution(tsp):
     cities = list(range(len(tsp)))
     solution = []
@@ -13,11 +14,13 @@ def randomSolution(tsp):
 
     return solution
 
+
 def routeLength(tsp, solution):
     routeLength = 0
     for i in range(len(solution)):
         routeLength += tsp[solution[i - 1]][solution[i]]
     return routeLength
+
 
 def getNeighbours(solution):
     neighbours = []
@@ -29,6 +32,7 @@ def getNeighbours(solution):
             neighbours.append(neighbour)
     return neighbours
 
+
 def getBestNeighbour(tsp, neighbours):
     bestRouteLength = routeLength(tsp, neighbours[0])
     bestNeighbour = neighbours[0]
@@ -38,6 +42,7 @@ def getBestNeighbour(tsp, neighbours):
             bestRouteLength = currentRouteLength
             bestNeighbour = neighbour
     return bestNeighbour, bestRouteLength
+
 
 def hillClimbing(tsp):
     currentSolution = randomSolution(tsp)
@@ -52,6 +57,7 @@ def hillClimbing(tsp):
         bestNeighbour, bestNeighbourRouteLength = getBestNeighbour(tsp, neighbours)
 
     return currentSolution, currentRouteLength
+
 
 tsp = [
     [0, 400, 500, 300],
