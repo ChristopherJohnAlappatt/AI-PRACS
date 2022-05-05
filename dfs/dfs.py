@@ -23,6 +23,7 @@ def dfs(visited, stack, output, graph, start_node):
         m = stack.pop()
         print("Pop ", m, "from the stack and mark it as visited")
         print("Visited      => ", visited)
+
         output.append(m)
         print("Output       => ", output)
 
