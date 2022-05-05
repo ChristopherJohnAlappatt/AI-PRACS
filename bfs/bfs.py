@@ -6,6 +6,7 @@ graph = {
     "4": ["8"],
     "8": []
 }
+
 queue = []
 visited = []
 output = []
