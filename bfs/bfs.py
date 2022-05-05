@@ -6,7 +6,6 @@ graph = {
     "4": ["8"],
     "8": []
 }
-
 queue = []
 visited = []
 output = []
@@ -33,5 +32,4 @@ def bfs(graph, queue, visited, output, start_node):
     return output
 
 
-print(type(graph))
 print(bfs(graph, queue, visited, output, "5"))
