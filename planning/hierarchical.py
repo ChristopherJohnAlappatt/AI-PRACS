@@ -77,6 +77,7 @@ elif choice == 2:
     elif choice == 3:
         actions.append(options_for_car[2]["action"])
 
+# Choice for train
 elif choice == 3:
     actions.append(options_for_travelling[2]["action"])
     i = 0

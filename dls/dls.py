@@ -29,10 +29,9 @@ def DLS(start, goal, path, level, maxD):
 start = '5'
 goal = input('Enter the goal node:-')
 maxD = int(input("Enter the maximum depth limit:-"))
-print()
 path = list()
 result = DLS(start, goal, path, 0, maxD)
-if (result):
+if result:
     print("Path to goal node available")
     print("Path", path)
 else:
